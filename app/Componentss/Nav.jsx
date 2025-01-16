@@ -9,19 +9,19 @@ const Nav = () => {
   
     const menuItems = [
       { label: 'Home', href: '#home' },
-      { label: 'About', href: '#about' },
-      { label: 'Projects', href: '#projects' },
-      { label: 'Skills', href: '#skills' },
+      { label: 'A Propos', href: '#about' },
+      { label: 'Projets', href: '#projects' },
+      { label: 'Competences', href: '#skills' },
       { label: 'Contact', href: '#contact' }
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-neutral-50 shadow-md z-50">
+        <nav className="fixed top-0 left-0 right-0 bg-neutral-50 shadow-md z-[4000]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo/Name */}
               <div className="flex-shrink-0">
-                <a href="#home" className="text-xl font-bold text-green-500">
+                <a href="#home" className="text-2xl font-bold text-green-500">
                   SADIK.
                 </a>
               </div>
@@ -33,7 +33,7 @@ const Nav = () => {
                     <a
                       key={item.label}
                       href={item.href}
-                      className=" text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
+                      className="text-gray-700 hover:text-green-500 px-3 py-2 rounded-md text-sm font-bold transition-colors duration-200"
                     >
                       {item.label}
                     </a>

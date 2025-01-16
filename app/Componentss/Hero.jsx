@@ -11,6 +11,7 @@ import { SiFramework } from "react-icons/si";
 import { BsDownload } from "react-icons/bs";
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { BackgroundBeams } from '@/components/ui/background-beams';
+
 import {
     IconBrandVercel,
     IconBrandLinkedin,
@@ -72,8 +73,9 @@ const Hero = () => {
 
 
     return (
-        <div>
+        <div id='home'>
             <AuroraBackground>
+            
                 <motion.div
                     initial={{ opacity: 0.0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +84,7 @@ const Hero = () => {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-                    className="relative flex flex-col gap-4 items-center justify-center px-4"
+                    className=" relative flex flex-col gap-4 items-center justify-center px-4"
                 >
                     <div className="md:mt-40 text-3xl md:text-7xl font-bold text-green-500 dark:text-white text-center">
                         Bonjour, Je Suis Mouad Sadik.
@@ -92,7 +94,7 @@ const Hero = () => {
                     </div>
                 </motion.div>
                 {/* Action Buttons */}
-                <div className="flex items-center justify-center gap-4 mt-4">
+                <div className="flex items-center justify-center gap-4 mt-4 z-10">
                     <Button className="bg-green-500  hover:scale-110 transition-all duration-500">
                         <Link href="#projects">Voir mon travail</Link>
                         <SiFramework className="ml-2 " />
@@ -106,18 +108,14 @@ const Hero = () => {
                 </div>
 
                 {/* Social Links */}
-            <div className="flex items-center justify-center w-full mt-12 ">
+            <div className="flex items-center justify-center w-full mt-12 z-10 ">
                     <FloatingDock
                         mobileClassName="translate-y-20" // only for demo, remove for production
                         items={links}
                     />
             </div>
-            <BackgroundBeams />
+            <BackgroundBeams/>
             </AuroraBackground>
-
-            
-
-
         </div>
     )
 }

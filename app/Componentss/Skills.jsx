@@ -15,7 +15,7 @@ import Image from 'next/image';
 
 const Skills = () => {
     return (
-        <div className='min-h-screen flex flex-col items-center justify-center text-center'>
+        <div id='skills' className='min-h-screen flex flex-col items-center justify-center text-center'>
             <h2 className="text-green-500 text-4xl font-bold mt-20  mb-12 animate-fade-in-out">Competences</h2>
             <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
                 {items.map((item, i) => (
