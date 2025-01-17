@@ -7,7 +7,7 @@ import Skills from "./Componentss/Skills";
 import Techno from "./Componentss/Techno";
 import Testimonials from "./Componentss/Testimonials";
 import Footer from "./Componentss/Footer";
-
+  
 export default function Home() {
   return (
     <div>
