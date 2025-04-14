@@ -74,7 +74,7 @@ const Hero = () => {
 
     return (
         <div id='home'>
-            <AuroraBackground>
+            
             
                 <motion.div
                     initial={{ opacity: 0.0, y: 40 }}
@@ -84,14 +84,21 @@ const Hero = () => {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
-                    className=" relative flex flex-col gap-4 items-center justify-center px-4"
+                    className=" relative flex flex-col gap-4 items-center justify-center px-4 z-50"
                 >
-                    <div className="md:mt-40 text-3xl md:text-7xl font-bold text-green-500 dark:text-white text-center">
-                        Bonjour, Je Suis Mouad Sadik.
+
+                    <div>
+                        <img className='mt-40 w-40 z-50  rounded-full object-cover border-4 border-green-500 shadow-lg' 
+                            src="photo2.png" 
+                            alt="me" />
                     </div>
-                    <div className="font-extralight text-base md:text-4xl text-gray-700  dark:text-neutral-200 py-4">
-                        Eleve Ingenieur Et developpeur frontend.
+
+                    <div className="font-extralight text-3xl md:text-4xl font-bold  dark:text-white text-center z-50 m-5">
+                        Hey there! <span className='text-green-500'>I’m Mouad</span> a Computer Science student <br />
+                        with a passion for building software <br />
+                        and making cool things with code. <br />
                     </div>
+                    
                 </motion.div>
                 {/* Action Buttons */}
                 <div className="flex items-center justify-center gap-4 mt-4 z-10">
@@ -114,8 +121,9 @@ const Hero = () => {
                         items={links}
                     />
             </div>
-            <BackgroundBeams/>
-            </AuroraBackground>
+
+            <BackgroundBeams />
+            
         </div>
     )
 }
