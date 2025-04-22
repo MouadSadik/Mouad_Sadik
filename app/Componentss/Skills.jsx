@@ -209,10 +209,10 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Algorithmes En Langague C
+                    Algorithms in C Language
                 </p>
                 <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-                    Algorithmes
+                    Algorithms
                 </p>
             </motion.div>
             <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
@@ -224,7 +224,7 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Dynamique Site Web
+                    Dynamic Website
                 </p>
                 <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     JavaScript
@@ -242,7 +242,7 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Solution Des Problemes
+                    Problem Solving
                 </p>
                 <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     JAVA
@@ -295,7 +295,7 @@ const SkeletonFive = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="text-xs text-neutral-500">
-                les algèbres, les calculs, les probabilités et les statistiques, appliqués à la résolution de problèmes.....
+                Algebras, calculations, probabilities, and statistics, applied to problem solving...
                 </p>
             </motion.div>
             <motion.div
@@ -310,10 +310,10 @@ const SkeletonFive = () => {
 };
 const items = [
     {
-        title: "Flexibilité d'Apprentissage",
+        title: "Learning Flexibility",
         description: (
             <span className="text-sm">
-                Capacité à s'adapter rapidement aux nouvelles technologies.
+                Ability to quickly adapt to new technologies.
             </span>
         ),
         header: <SkeletonOne />,
@@ -324,7 +324,7 @@ const items = [
         title: "Communication",
         description: (
             <span className="text-sm">
-                Aptitude à transmettre clairement des idées techniques et collaborer efficacement avec les équipes.
+                Ability to clearly communicate technical ideas and collaborate effectively with teams.
             </span>
         ),
         header: <SkeletonTwo />,
@@ -332,10 +332,10 @@ const items = [
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Design Graphique",
+        title: "Graphic Design",
         description: (
             <span className="text-sm">
-                Compétence en création d'interfaces visuelles attrayantes et intuitives.
+                Skills in creating attractive and intuitive visual interfaces.
             </span>
         ),
         header: <SkeletonThree />,
@@ -343,10 +343,10 @@ const items = [
         icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Algorithmes et Programmation",
+        title: "Algorithmss & Programming",
         description: (
             <span className="text-sm">
-                Comprendre la conception d'algorithmes efficaces et résoudre des problèmes complexes avec une programmation performante.
+                Understanding the design of efficient algorithms and solving complex problems with high-performance programming.
             </span>
         ),
         header: <SkeletonFour />,
@@ -355,10 +355,10 @@ const items = [
     },
 
     {
-        title: "Mathématiques",
+        title: "Mathematics",
         description: (
             <span className="text-sm">
-                Maîtrise des concepts mathématiques fondamentaux.
+                Mastery of fundamental mathematical concepts.
             </span>
         ),
         header: <SkeletonFive />,

@@ -8,6 +8,9 @@ import Techno from "./Componentss/Techno";
 import Testimonials from "./Componentss/Testimonials";
 import Footer from "./Componentss/Footer";
 import { Projects } from "./Componentss/Projects";
+import SkillsSection from "./Componentss/Skills2";
+import Technologies from "./Componentss/Skills2";
+import Contact from "./Componentss/Contact";
   
 export default function Home() {
   return (
@@ -16,8 +19,9 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Techno />
+      <Technologies />
       <Projects />
+      <Contact />
     </div>
   );
 }
