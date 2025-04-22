@@ -88,8 +88,8 @@ const Hero = () => {
                 >
 
                     <div>
-                        <img className='mt-40 w-40 z-50  rounded-full object-cover border-4 border-green-500 shadow-lg' 
-                            src="photo2.png" 
+                        <img className='mt-20 w-56 md:w-80 z-50  rounded-full object-cover border-4 border-green-500 shadow-lg' 
+                            src="moi.png" 
                             alt="me" />
                     </div>
 

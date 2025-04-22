@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
     return (
 
-        <div className="grid grid-cols-1 justify-items-center items-center  pb-5">
+        <div id='contact' className="grid grid-cols-1 justify-items-center items-center  pb-5 px-3">
             {/* Contact Information */}
             <div className="flex flex-col justify-center align-items">
                 <div className="mb-8">
