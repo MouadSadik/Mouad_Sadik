@@ -93,7 +93,7 @@ const Hero = () => {
                             alt="me" />
                     </div>
 
-                    <div className="font-extralight text-3xl md:text-4xl font-bold  dark:text-white text-center z-50 m-5">
+                    <div className="font-extralight text-3xl md:text-4xl   dark:text-white text-center z-50 m-5">
                         Hey there! <span className='text-green-500'>I’m Mouad</span> a Computer Science student <br />
                         with a passion for building software <br />
                         and making cool things with code. <br />
@@ -103,12 +103,12 @@ const Hero = () => {
                 {/* Action Buttons */}
                 <div className="flex items-center justify-center gap-4 mt-4 z-10">
                     <Button className="bg-green-500  hover:scale-110 transition-all duration-500">
-                        <Link href="#projects">Voir mon travail</Link>
+                        <Link href="#projects">View More</Link>
                         <SiFramework className="ml-2 " />
                     </Button>
                     <Button variant="outline" className="text-green-500 cursor-pointer transition-all duration-500">
                         <Link className="hidden md:block" href="#projects">
-                            Telecharger CV
+                            Download CV
                         </Link>
                         <BsDownload className="ml-2 animate-pulse" />
                     </Button>
