@@ -1,8 +1,8 @@
 "use client"
-import { cn } from "@/lib/utils";
+
+import React from "react";
+
 import Image from "next/image";
-import React from 'react';
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { Timeline } from "@/components/ui/timeline";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 
@@ -10,7 +10,7 @@ const About = () => {
 
     const data = [
         {
-            title: "2024-present",
+            title: "2024-Present",
             content: (
                 <div className="w-full flex ">
                     <BackgroundGradient className="md:w-[600px] max-w-md rounded-[22px] p-4 sm:p-4 bg-white dark:bg-zinc-900">

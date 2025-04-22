@@ -1,81 +1,296 @@
-"use client";
-import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
+"use client"
+import React from "react";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
-export function GlowingEffectDemo() {
-    return (
-        <div>
-            <h2 className="text-green-500 text-4xl font-bold mt-20 text-center  mb-12 animate-fade-in-out">Skills</h2>
-            <ul
-                className="mx-3 md:mx-10 grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
-                <GridItem
-                    area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-                    icon={
-                        <img
-                          src="/fsts.png"
-                          alt="Description of image"
-                          className="h-6 w-6 object-contain"
-                        />
-                      }
-                      
-                    title="Do things the right way"
-                    description="Running out of copy so I'll write anything." />
-                <GridItem
-                    area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-                    icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
-                    title="The best AI code editor ever."
-                    description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me." />
-                <GridItem
-                    area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-                    icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
-                    title="You should buy Aceternity UI Pro"
-                    description="It's the best money you'll ever spend" />
-                <GridItem
-                    area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-                    icon={<Sparkles className="h-4 w-4 text-black dark:text-neutral-400" />}
-                    title="This card is also built by Cursor"
-                    description="I'm not even kidding. Ask my mom if you don't believe me." />
-                <GridItem
-                    area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-                    icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
-                    title="Coming soon on Aceternity UI"
-                    description="I'm writing the code as I record this, no shit." />
-            </ul>
-        </div>
-    );
+export function Projects() {
+  const cards = data.map((card, index) => (
+    <Card key={card.src} card={card} index={index} />
+  ));
+
+  return (
+    <div className="w-full h-full py-20">
+      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-green-500 dark:text-neutral-200 font-sans">
+        My Projects
+      </h2>
+      <Carousel items={cards} />
+    </div>
+  );
 }
 
-const GridItem = (props) => {
-    const { area, icon, title, description } = props;
+const DummyContent1 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                A dynamic personal portfolio
+              </span>{" "}
+              built using React.js to highlight my skills, projects, and achievements in web development. The website features a sleek, modern design with a responsive layout, showcasing my work and providing easy access to my contact information. It is deployed on Vercel for seamless performance and fast loading times. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              React.js,
+              Next.js,
+              Tailwind CSS,
+              GitHub,
+              Vercel (Deployment) <br />
+            </p>
 
-    return (
-        <li className={`min-h-[14rem] list-none ${area}`}>
-            <div className="relative h-full rounded-2xl border p-2 md:rounded-3xl md:p-3">
-                <GlowingEffect
-                    spread={40}
-                    glow={true}
-                    disabled={false}
-                    proximity={64}
-                    inactiveZone={0.01} />
-                <div
-                    className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
-                    <div className="relative flex flex-1 flex-col justify-between gap-3">
-                        <div className="w-full rounded-lg border border-gray-600 p-2">
-                            {icon}
-                        </div>
-                        <div className="space-y-3">
-                            <h3
-                                className="-tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
-                                {title}
-                            </h3>
-                            <h2
-                                className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
-                                {description}
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    );
+            <img
+              src="portfolio.png"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="https://mouad-sadik.vercel.app/" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="https://github.com/MouadSadik/Mouad_Sadik" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
 };
+
+const DummyContent2 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                An interactive online platform
+              </span>{" "}
+              where students can register, post articles, comment, and stay updated with the latest magazine news. Users can engage with content through reactions and messaging, creating a dynamic and collaborative environment for student-driven content. I collaborated with a team of 5 developers, serving as the frontend developer and Figma designer to ensure a smooth and visually appealing user experience. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              React.js,
+              Next.js,
+              Tailwind CSS,
+              GitHub,
+              Figma,
+              Vercel (Deployment) <br />
+            </p>
+
+            <img
+              src="magazin.png"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="https://github.com/zzemat/Magazine-IMPACT" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="https://github.com/zzemat/Magazine-IMPACT" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const DummyContent3 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                A modern frontend for an eCommerce store,
+              </span>{" "}
+              featuring dynamic product listings, detailed product pages, and a shopping cart. The app uses App Router for smooth navigation and seamless transitions between pages, ensuring a fluid and efficient user experience across both desktop platforms. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              React.js,
+              Next.js,
+              Tailwind CSS,
+              GitHub,
+              Vercel (Deployment) <br />
+            </p>
+
+            <img
+              src="store.png"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="https://ecommerce-store-delta-silk.vercel.app/" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="https://github.com/MouadSadik/ecommerce-store" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const DummyContent4 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                A sleek note-taking app
+              </span>{" "}
+              with user authentication powered by Clerk. It allows users to securely create, edit, and manage their notes in a clean and modern interface using ShadCN UI components. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              React.js,
+              Next.js,
+              Tailwind CSS,
+              Git/GitHub,
+              Clerck,
+              Shadcn ui <br />
+            </p>
+
+            <img
+              src="notes.png"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="https://github.com/MouadSadik/Add-Notes" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="https://github.com/MouadSadik/Add-Notes" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const DummyContent5 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                A hotel booking management
+              </span>{" "}
+              system developed in C, allowing users to reserve rooms, check availability, and manage customer data via file or database interaction. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              C, Database, Sql Server <br />
+            </p>
+
+            <img
+              src="bd.png"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="https://github.com/MouadSadik/GestionReservationHoteliere" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="https://github.com/MouadSadik/GestionReservationHoteliere" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const DummyContent6 = () => {
+  return (
+    <>
+      {[...new Array(1).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                A Java-based application
+              </span>{" "}
+              to digitalize the workflow of a recruitment agency, managing companies, subscriptions, job offers, newspapers, and applicants. The system handles complex business rules such as experience filtering, multi-edition job postings, and automatic offer deactivation once positions are filled. <br />
+              <span className="font-bold text-neutral-700">Technologies Used : </span>
+              Java,
+              JDBC or JPA (for database handling),
+              MySQL (or any RDBMS),
+              JavaFX / Swing (if GUI),
+              UML (for design modeling) <br />
+            </p>
+
+            <img
+              src="agency.jpg"
+              alt="portfolio"
+              height="500"
+              width="500"
+              className=" m-10 h-full w-full mx-auto object-contain"
+            />
+
+            <a href="#projects" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded mr-4 transition duration-300 ease-in-out">View Project</a>
+
+            <a href="#projects" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out">Github</a>
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+
+const data = [
+  {
+    category: "Personal Portfolio",
+    title: "Where my skills and passion come to life.",
+    src: "portfolio.png",
+    content: <DummyContent1 />,
+  },
+  {
+    category: "Magazin-Impact Etudiant",
+    title: "A student platform to post, interact, and stay updated.",
+    src: "magazin.png",
+    content: <DummyContent2 />,
+  },
+  {
+    category: "Ecommerce Store",
+    title: "eCommerce store with smooth navigation",
+    src: "store.png",
+    content: <DummyContent3 />,
+  },
+  {
+    category: "Notes App",
+    title: "A secure and stylish note manager",
+    src: "notes.png",
+    content: <DummyContent4 />,
+  },
+  {
+    category: "Hotel Reservation System",
+    title: "Academic Project",
+    src: "bd.png",
+    content: <DummyContent5 />,
+  },
+  {
+    category: "Recruitment Agency (Coming Soon)",
+    title: "Academic Java Project",
+    src: "agency.jpg",
+    content: <DummyContent6 />,
+  },
+];

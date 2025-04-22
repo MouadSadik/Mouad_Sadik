@@ -7,7 +7,7 @@ import Skills from "./Componentss/Skills";
 import Techno from "./Componentss/Techno";
 import Testimonials from "./Componentss/Testimonials";
 import Footer from "./Componentss/Footer";
-import Projects, { GlowingEffectDemo } from "./Componentss/Projects";
+import { Projects } from "./Componentss/Projects";
   
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       <Skills />
       <Techno />
-      <GlowingEffectDemo />
+      <Projects />
     </div>
   );
 }
